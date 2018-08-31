@@ -1,0 +1,23 @@
+<html>
+<head>
+    <!--user_info是一个对象，user_name则是该对象的一个属性-->
+    <title>Edit Info for User: {{user_info.user_name}}</title>
+</head>
+<body>
+<h1>编辑用户信息</h1>
+<hr/>
+<center>
+    <!--以POST方式将修改后的信息提交到UpdateUserInfo-->
+    <form name = 'edit_user_info' action = 'UpdateUserInfo' method = 'post' >
+            姓名: <input type = 'text' name = 'user_name' value = {{user_info.user_name }} readonly/>
+            年龄: <input type = 'text' name = 'user_age' value = {{user_info.user_age }} />
+            性别: <input type = 'text' name = 'user_sex' value = {{user_info.user_sex }} />
+            分数: <input type = 'text' name = 'user_score' value = {{user_info.user_score }} />
+            课程: <input type = 'text' name = 'user_subject' value = {{user_info.user_subject }} />
+            <input type = 'submit' value = '提交' />
+            <input type = 'Reset' value = '重置' />
+    </form>
+</center>
+<hr/>
+</body>
+</html>
